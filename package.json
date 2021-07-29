@@ -1,46 +1,58 @@
 {
-  "name": "threshold-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+  "name": "example-server",
+  "version": "1.0.0",
+  "description": "This is an example of a basic HTTP API server.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "nyc node test/index.js && npm run deps && standard",
+    "deps": "npm run deps-missing && npm run deps-extra",
+    "deps-missing": "dependency-check --no-dev .",
+    "deps-extra": "dependency-check --no-dev --extra ."
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Interlincx/example-server.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "David Guttman <david@guttman.io> (http://davidguttman.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Interlincx/example-server/issues"
   },
+  "homepage": "https://github.com/Interlincx/example-server#readme",
   "devDependencies": {
-    "eslint": "^7.25.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "dependency-check": "^2.10.1",
+    "nodemon": "^1.19.3",
+    "nyc": "^11.9.0",
+    "servertest": "^1.2.1",
+    "split2": "^2.2.0",
+    "standard": "^10.0.3",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "authentic-service": "^0.3.1",
+    "body": "^5.1.0",
+    "corsify": "^2.1.0",
+    "cuid": "^1.3.8",
+    "dotenv": "^4.0.0",
+    "healthpoint": "^1.0.0",
+    "http-hash-router": "^1.1.2",
+    "level-sublevel": "^6.6.5",
+    "levelup": "^1.3.9",
+    "memdown": "^1.4.1",
+    "leveldown": "^5.2.1",
+    "mongodown": "^1.2.0",
+    "productionize": "^4.1.0",
+    "pump": "^1.0.3",
+    "req-logger": "^2.0.0",
+    "send-data": "^8.0.0",
+    "serialize-stream": "^1.1.0",
+    "xtend": "^4.0.2"
   }
 }

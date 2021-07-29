@@ -1,27 +1,18 @@
-# Engineering React Rebase Challenge
-
-You will be expected to be able to contribute features and fixes without causing conflicts and other version control headaches. An important tool for keeping codebases clean is `git rebase`. This challenge will test your understanding of a basic codebase and your ability to use `git rebase` properly.
-
-## The Challenge
-
-There are two pull requests open on this repo. Each change is in its own branch. The challenge is to use `git rebase` to add both changes to `main`. When you are finished, your `main` branch should have three commits in the following order:
-
+# Git Challenge
+There are two branches, `add-echo` and `add-reverse`. The goal of this challenge is to use `git rebase` to bring both commits onto master. When finished there should be no merge commits or branching. For example, `git log` on the `master` branch should look similar to this:
 ```
-* feat: add Biology Today article
-* feat: add Auto Review article
-* fiat lux
+/challenge-git master
+⚡ git log
+61a2c67 feat: add reverse route (David Guttman, 7 minutes ago)
+2c2c5d6 feat: add echo route (David Guttman, 10 minutes ago)
+dcc4c0b docs: add more instructions (David Guttman, 11 minutes ago)
+...
 ```
-
-_Any errors, missing features, missing tests, or failing tests will disqualify the solution._
-
 ## Instructions
-
 How to attempt this challenge:
-
-1) Clone this repo locally
-2) Solve the challenge locally
-3) Create a new repo in your GitHub account and note the git url
-4) Set your local origin to the new git url: `git remote set-url origin ${git url}`
-5) Push your solution to the newly set origin
-
-You must follow these steps for your solution to be accepted -- **forks or other methods will not be considered.**
+1) Create a new repo in your account and note the git url
+2) Clone this repo
+3) Solve the challenge
+4) Set your new repo as the origin: `git remote set-url origin ${your repo url}`
+5) Push your solution to your repo
+You must follow these steps for your solution to be accepted -- forks or other methods will not be considered.
